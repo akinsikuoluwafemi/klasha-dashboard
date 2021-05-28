@@ -36,8 +36,9 @@ export const MenuText = styled.p`
 
 
 export const HeaderContent = styled.div`
+	background: pink;
     padding: 2rem;
-    // height: 100%;
+    height: 100%;
 	width: 100%;
     display: flex;
     align-items: center;
