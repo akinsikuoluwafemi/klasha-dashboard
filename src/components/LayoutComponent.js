@@ -115,7 +115,7 @@ export default function LayoutComponent({children}) {
 				</Menu>
 			</Sider>
 			<Layout className="site-layout">
-				<div style={{ display: 'flex', alignItems: 'center' }} className="site-layout-background" style={{ padding: '0' }}>
+				<div style={{ display: 'flex', alignItems: 'center', padding: '0' }} className="site-layout-background">
 					<HeaderContent>
 						<HeaderBalance>
 							<p>Balances</p>

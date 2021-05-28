@@ -15,7 +15,6 @@ import {
 	PayoutTableFormWrapper,
 	PayoutText,
 	PayoutForm,
-	PayoutBtn,
 	TableContainer,
 	MoreText,
 	SelectWrapper,
