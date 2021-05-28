@@ -1,0 +1,55 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+
+}
+
+th {
+  background: #F5F5F5;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  border: none;
+}
+
+tr:not(:first-of-type) {
+  margin-bottom: 1rem;
+  transition: all .3s ease-in;
+  
+}
+
+tr:not(:first-of-type):hover {
+  border-radius: 5px!important;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08)!important;
+  border:1px solid #3D8F83;
+  
+}
+
+th {
+  padding: 1.2rem 2rem;
+}
+
+td {
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+}
+
+
+
+
+.search-field {
+  width: 30rem;
+  padding: 1rem;
+}
+
+@media(max-width: 425px){
+    .search-field {
+    width: 19rem;
+    padding: 1rem;
+  }
+}

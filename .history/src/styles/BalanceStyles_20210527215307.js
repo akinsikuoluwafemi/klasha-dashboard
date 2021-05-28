@@ -1,0 +1,20 @@
+import styled from 'styled-components';
+
+
+export const AccountBalanceWrapper = styled.div`
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    height: 17.6rem;
+    width: 68.5rem;
+
+`;
+
+export const TotalBalanceWrapper = styled.div`
+	background: red;
+	border-top-right-radius: 1rem;
+`;
+
+export const FundsOnHoldWrapper = styled.div`
+	background: teal;
+	border-top-right-radius: 1rem;
+`;
