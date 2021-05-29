@@ -46,7 +46,7 @@ export default function LayoutComponent({children}) {
     }
 
 	const menu = (
-		<Menu style={{ textAlign: 'center'}}>
+		<Menu style={{ textAlign: 'center', background: 'pink'}}>
 			<Menu.Item key="0">
 				<NotificationCircle big style={{margin: 'auto'}}>
 					<span style={{ marginTop: '5px' }}>
@@ -65,7 +65,7 @@ export default function LayoutComponent({children}) {
 						size="large"
 						src="https://res.cloudinary.com/dt69gb9me/image/upload/v1622140249/ava_ni3yvc.png"
 						/>
-					</span>
+						</span>
 				</UserNotificationWrapper>
 			</Menu.Item>
 		</Menu>

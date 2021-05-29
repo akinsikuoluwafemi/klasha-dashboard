@@ -46,7 +46,7 @@ export default function LayoutComponent({children}) {
     }
 
 	const menu = (
-		<Menu style={{ textAlign: 'center'}}>
+		<Menu style={{ textAlign: 'center', background: 'pink'}}>
 			<Menu.Item key="0">
 				<NotificationCircle big style={{margin: 'auto'}}>
 					<span style={{ marginTop: '5px' }}>
@@ -57,16 +57,13 @@ export default function LayoutComponent({children}) {
 			</Menu.Item>
 			<Menu.Item key="1" style={{margin: 'auto', textAlign: 'center'}}>
 				
-				<UserNotificationWrapper>
-					<span>
-
+				{/* <UserNotificationWrapper> */}
 					<Avatar
 						style={{ width: '3.2rem', height: '3.2rem' }}
 						size="large"
 						src="https://res.cloudinary.com/dt69gb9me/image/upload/v1622140249/ava_ni3yvc.png"
-						/>
-					</span>
-				</UserNotificationWrapper>
+					/>
+				{/* </UserNotificationWrapper> */}
 			</Menu.Item>
 		</Menu>
 	)
