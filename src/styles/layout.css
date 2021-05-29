@@ -55,3 +55,6 @@
 .ant-layout-content .site-layout-background{
   margin: 0!important;
 }
+.ant-menu-item-selected a, .ant-menu-item-selected a:hover{
+  color: inherit;
+}

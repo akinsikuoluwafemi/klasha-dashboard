@@ -1,11 +1,6 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import React, {useState} from 'react';
-import { Layout, Menu, Avatar } from 'antd';
-import {
-	MenuUnfoldOutlined,
-	MenuFoldOutlined,
-	
-} from '@ant-design/icons';
+import { Layout, Menu, Avatar , Dropdown } from 'antd';
+import { MenuUnfoldOutlined, MenuFoldOutlined, DownOutlined} from '@ant-design/icons';
 import '../styles/layout.css'
 import {
 	LogoWrapper,
@@ -15,6 +10,7 @@ import {
 	HeaderBalance,
 	UserNotificationWrapper,
 	NotificationCircle,
+	SmallerHoverMenu,
 } from '../styles/LayoutStyles';
 import Logo from '../assets/logo.svg';
 import {
@@ -28,6 +24,7 @@ import {
 	TeamIcon,
 	NotificationIcon,
 } from '../assets/icon';
+import {Link} from 'react-router-dom';
 
 
 
@@ -47,6 +44,28 @@ export default function LayoutComponent({children}) {
     const toggle = () => {
         setCollapsed(prev => !prev)
     }
+
+	const menu = (
+		<Menu style={{textAlign: 'center'}}>
+			<Menu.Item key="0">
+				<NotificationCircle big style={{margin: 'auto'}}>
+					<span style={{ marginTop: '5px' }}>
+						<NotificationIcon />
+					</span>
+					<NotificationCircle small />
+				</NotificationCircle>
+			</Menu.Item>
+			<Menu.Item key="1">
+				<span>
+					<Avatar
+						style={{ width: '3.2rem', height: '3.2rem' }}
+						size="large"
+						src="https://res.cloudinary.com/dt69gb9me/image/upload/v1622140249/ava_ni3yvc.png"
+					/>
+				</span>
+			</Menu.Item>
+		</Menu>
+	)
     
     return (
 		<Layout style={{ height: '100vh' }}>
@@ -70,13 +89,13 @@ export default function LayoutComponent({children}) {
 						<Menu.Item key="2">
 							<SubMenuContent>
 								<Wallet />
-								<span className="sub-menu-text">Balances</span>
+								<span className="sub-menu-text"><Link to="/">Balances</Link></span>
 							</SubMenuContent>
 						</Menu.Item>
 						<Menu.Item key="3">
 							<SubMenuContent>
 								<CustomerIcon />
-								<span className="sub-menu-text">Customers</span>
+								<span className="sub-menu-text"><Link to="/customers">Customers</Link></span>
 							</SubMenuContent>
 						</Menu.Item>
 						<Menu.Item key="4">
@@ -122,7 +141,7 @@ export default function LayoutComponent({children}) {
 							<small>Today, 19th October 2020</small>
 						</HeaderBalance>
 
-						<UserNotificationWrapper>
+						<UserNotificationWrapper largerdevices>
 							<NotificationCircle big>
 								<span style={{ marginTop: '5px' }}>
 									<NotificationIcon />
@@ -131,12 +150,23 @@ export default function LayoutComponent({children}) {
 							</NotificationCircle>
 							<span>
 								<Avatar
-								style={{width: '3.2rem', height: '3.2rem'}}
+									style={{ width: '3.2rem', height: '3.2rem' }}
 									size="large"
 									src="https://res.cloudinary.com/dt69gb9me/image/upload/v1622140249/ava_ni3yvc.png"
 								/>
 							</span>
 						</UserNotificationWrapper>
+
+						{/*  */}
+						<SmallerHoverMenu>
+							<Dropdown overlay={menu} trigger={['click']}>
+								<span style={{color: 'green'}} className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+								 <DownOutlined />
+								</span>
+							</Dropdown>
+						</SmallerHoverMenu>
+
+						{/*  */}
 					</HeaderContent>
 				</div>
 				<Content
@@ -148,7 +178,10 @@ export default function LayoutComponent({children}) {
 						// width: 'max-content'
 					}}
 				>
-					<div style={{ overflow: 'auto', height: '100%', padding: '2rem' }}>{children}</div>
+					<div style={{ overflow: 'auto', height: '100%', padding: '2rem' }}>
+						
+						{children}
+					</div>
 				</Content>
 			</Layout>
 		</Layout>

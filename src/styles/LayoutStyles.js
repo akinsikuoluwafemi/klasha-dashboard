@@ -83,22 +83,42 @@ export const HeaderBalance = styled.div`
 
 
 export const UserNotificationWrapper = styled.div`
+	
+
 	display: flex;
 	align-items: center;
 	// justify-content: space-around;
 	// background: purple;
 	padding: 0 2rem;
 
-    @media(max-width: 375px){
-        padding: 0;
-    }
-
+	@media (max-width: 375px) {
+		padding: 0;
+	}
 
 	& > span {
 		border: 1px solid red;
 		border-radius: 50%;
 		padding: 0.3rem;
 		background: #f5f5f5;
+	}
+
+	@media (max-width: 425px) {
+		${(props) =>
+			props.largerdevices &&
+			`
+			display: none;
+		
+		`}
+	}
+
+	
+`;
+
+export const SmallerHoverMenu = styled.div`
+	display: none;
+
+	@media (max-width: 425px) {
+		display: grid;
 	}
 `;
 
