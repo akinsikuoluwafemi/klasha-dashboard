@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Layout, Menu, Avatar , Dropdown } from 'antd';
-import { MenuUnfoldOutlined, MenuFoldOutlined, DownOutlined} from '@ant-design/icons';
+import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
 import '../styles/layout.css'
 import {
 	LogoWrapper,
@@ -26,7 +26,7 @@ import {
 } from '../assets/icon';
 import {Link} from 'react-router-dom';
 
-
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 
@@ -56,13 +56,16 @@ export default function LayoutComponent({children}) {
 				</NotificationCircle>
 			</Menu.Item>
 			<Menu.Item key="1">
-				<span>
+				
+				<UserNotificationWrapper>
+				
+				
 					<Avatar
 						style={{ width: '3.2rem', height: '3.2rem' }}
 						size="large"
 						src="https://res.cloudinary.com/dt69gb9me/image/upload/v1622140249/ava_ni3yvc.png"
 					/>
-				</span>
+				</UserNotificationWrapper>
 			</Menu.Item>
 		</Menu>
 	)
@@ -161,7 +164,7 @@ export default function LayoutComponent({children}) {
 						<SmallerHoverMenu>
 							<Dropdown overlay={menu} trigger={['click']}>
 								<span style={{color: 'green'}} className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-								 <DownOutlined />
+								 <MenuIcon />
 								</span>
 							</Dropdown>
 						</SmallerHoverMenu>
