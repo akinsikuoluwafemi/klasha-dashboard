@@ -58,6 +58,7 @@ export default function LayoutComponent({children}) {
 			<Menu.Item key="1" style={{margin: 'auto', textAlign: 'center'}}>
 				
 				<UserNotificationWrapper>
+					
 					<span>
 
 					<Avatar
@@ -66,7 +67,6 @@ export default function LayoutComponent({children}) {
 						src="https://res.cloudinary.com/dt69gb9me/image/upload/v1622140249/ava_ni3yvc.png"
 						/>
 					</span>
-					
 				</UserNotificationWrapper>
 			</Menu.Item>
 		</Menu>
